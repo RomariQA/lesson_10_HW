@@ -1,8 +1,5 @@
-import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -21,8 +18,7 @@ public class WebSteps extends TestBase {
     @Step("Применить поиск по пользователю github в шапке сайта")
     public WebSteps searchUser(){
         $(".header-search-button").click();
-        $("#query-builder-test").setValue("RomariQA");
-        $("#query-builder-test").submit();
+        $("#query-builder-test").setValue("RomariQA").submit();
 
         return this;
     }
@@ -54,11 +50,4 @@ public class WebSteps extends TestBase {
 
         return this;
     }
-
-    @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
-    public byte[] takeScreenshot() {
-        return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }
-
-
 }

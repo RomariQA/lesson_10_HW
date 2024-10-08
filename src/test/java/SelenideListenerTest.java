@@ -17,8 +17,7 @@ public class SelenideListenerTest extends TestBase {
 
         open("/");
         $(".header-search-button").click();
-        $("#query-builder-test").setValue("RomariQA");
-        $("#query-builder-test").submit();
+        $("#query-builder-test").setValue("RomariQA").submit();
         $(".Box-sc-g0xbh4-0.hTXDNh").$(byText("Users")).click();
         $(".Text__StyledText-sc-17v1xeu-0.ehTXUv").click();
         $(".js-pinned-items-reorder-container").$(byText("lesson_10_HW")).click();

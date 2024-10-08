@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
-public class StepsTest extends TestBase {
+public class StepsTest {
 
     @Test
     @DisplayName("Steps Lambda тест - название чтоб в отчете красиво было")
