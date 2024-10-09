@@ -47,7 +47,6 @@ public class StepsTest extends TestBase {
           });
     }
 
-
     @Test
     @DisplayName("Наименование таба Issue при открытии репозитория с главной страницы")
     @Severity(SeverityLevel.TRIVIAL)
@@ -64,9 +63,4 @@ public class StepsTest extends TestBase {
         steps.choseRepoFromList();
         steps.checkIssueTabName();
     }
-
-
-
-
-
 }
